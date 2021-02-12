@@ -28,7 +28,8 @@ class FixedWindowRateLimiter extends RateLimiter {
     interval,
     limit,
   }) {
-    const values = await this.redis.limiter_reserve(key, interval, limit);
+    const keyWithPrefix = `fixed_window_rate_limiter:${key}`;
+    const values = await this.redis.limiter_reserve(keyWithPrefix, interval, limit);
     const result = {
       isOverRateLimit: values[0],
       usage: values[1],
