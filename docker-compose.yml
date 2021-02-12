@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  server:
+    build: .
+    ports:
+      - "5000:5000"
+
+  redis:
+    image: "redis:6.0.10-alpine3.13"
+    domainname: redis
