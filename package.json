@@ -11,7 +11,7 @@
     "test": "cross-env NODE_ENV=test jest --testTimeout=20000"
   },
   "author": "ggary9442",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "config": "^3.3.3",
     "cors": "^2.8.5",
