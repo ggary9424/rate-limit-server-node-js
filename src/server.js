@@ -9,7 +9,6 @@ const FixedWindowRateLimiter = require('./utils/rate-limiters/fixed_window_rate_
 const app = express();
 
 // Set up morgan
-// FIXME: Be able to disable log by setting
 app.use((req, res, next) => {
   if (!app.get('should_disable_log') === true) {
     morgan('tiny')(req, res, next);

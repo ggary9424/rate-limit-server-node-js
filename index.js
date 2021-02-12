@@ -22,7 +22,10 @@ app.set('port', SERVER_PORT);
 app.set('ioredis', ioredis);
 app.set('rate_limiter_interval_ms', 60 * 1000);
 app.set('rate_limiter_limit', 60);
+
 app.set('rate_limit_algorithm', 'sliding_window');
+// Or you can choose to use the "Fixed Window" algorithm to implement rate limit by the below command.
+// app.set('rate_limit_algorithm', 'fixed_window');
 
 const server = app.listen(
   SERVER_PORT,

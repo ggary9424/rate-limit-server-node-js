@@ -22,7 +22,7 @@ beforeEach(async () => {
   app.set('trust proxy', true);
 
   // initialize redis instance
-  const redis = new IORedis(global.__REDIS_URL);// eslint-disable-line no-underscore-dangle
+  const redis = new IORedis(global.__REDIS_URL); // eslint-disable-line no-underscore-dangle
 
   // flush all data
   await redis.flushall();
