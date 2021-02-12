@@ -44,3 +44,6 @@ $ heroku container:push web --recursive
 $ heroku container:release web
 $ heroku open
 ```
+
+## License
+[MIT](./LICENSE)
