@@ -1,8 +1,8 @@
 # Rate Limit Server by NodeJS
 
-## How to Execute the Code?
+## Get Started
 
-### On Local without Docker
+### Execute the Code On Local without Docker
 #### Requirements
 * NodeJS > v14.15.1
 * NPM > v6.11.2
@@ -18,7 +18,7 @@ $ REDIS_URL=redis://localhost:6379 node index.js
 $ # And try curl localhost:5000 if you have installed the 'curl' on your machine.
 ```
 
-### On Local with Docker
+### Execute the Code On Local with Docker Compose
 #### Requirements
 * Docker
 * Docker Compose
@@ -26,6 +26,21 @@ $ # And try curl localhost:5000 if you have installed the 'curl' on your machine
 #### Commands on Bash
 ```sh
 $ docker-compose up -d
+```
+
+### Testing
+#### Requirements
+* NodeJS > v14.15.1
+* NPM > v6.11.2
+* Redis > v3.2
+
+#### Commands on Bash
+```sh
+$ # Running a redis server on your local. (Note that the data behind the redis server must be for test purpose)
+$ # Configure "REDIS_URL" environment variable in the "config/test.json" file
+
+$ npm install
+$ npm run test
 ```
 
 ## Deploy to the Heroku
